@@ -35,6 +35,8 @@ for item in yml_data['item']:
     xml_tree.SubElement(item_element, 'itunes:duration').text = item['duration']
 
 # Pretty print the XML
+#editing the code
+
 rough_string = xml_tree.tostring(rss_element, 'utf-8')
 reparsed = xml.dom.minidom.parseString(rough_string)
 pretty_xml = reparsed.toprettyxml(indent="  ", encoding='utf-8')
